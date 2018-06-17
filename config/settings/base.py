@@ -29,7 +29,6 @@ if READ_DOT_ENV_FILE:
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'mrdt$g+a#8qp@g+ax5=v^uvicr83el9g$n0utlom9@z(fqnum='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DJANGO_DEBUG', False)
@@ -52,6 +51,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    'project.hi',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -150,3 +150,6 @@ STATICFILES_FINDERS = (
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = str(APPS_DIR('media'))
+
+REST_FRAMEWORK = {
+}
